@@ -4,6 +4,8 @@ import "./globals.css";
 
 import { cn } from "@/lib/utils";
 
+import { Providers } from "@/components/providers";
+
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
@@ -21,7 +23,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn(inter.className, "antialiased")}>{children}</body>
+      <body className={cn(inter.className, "antialiased")}>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }
