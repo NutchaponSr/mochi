@@ -3,9 +3,11 @@
 // Do not edit manually. Run `better-convex codegen` to regenerate.
 
 export const meta = {
-  user: {
-    create: { type: 'mutation' },
-    list: { type: 'query' },
+  email: {
+    sendEmail: { type: 'action' },
+  },
+  organization: {
+    create: { auth: 'required', rateLimit: 'organization/create', type: 'mutation' },
   },
 } as const;
 
